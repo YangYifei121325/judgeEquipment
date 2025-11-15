@@ -9,8 +9,13 @@
     <link rel="stylesheet" href="/judgeEquipment/assets/index-04490b11.css">
   </head>
   <body>
-    {{window.navigator.userAgent.toLowerCase().includes('BytedanceWebview')}}
+   <div>是否为字节跳动 WebView：<span id="bytedanceCheck"></span></div>
+
     <div id="root"></div>
+    <script>    // 1. 执行判断逻辑（和 Vue 中的表达式完全一致）
+    const isBytedanceWebview = window.navigator.userAgent.toLowerCase().includes('BytedanceWebview');
     
+    // 2. 获取 DOM 容器，插入结果（true/false 会自动转为字符串）
+    document.getElementById('bytedanceCheck').textContent = isBytedanceWebview;</script>
   </body>
 </html>
