@@ -157,6 +157,8 @@ const Bpp = () => {
       padding: '16px',
       boxSizing: 'border-box'
     }}>
+
+      是否为字节{window.navigator.userAgent.toLowerCase().toLowerCase().includes('bytedancewebview')}
       {/* 顶部标题栏 */}
       <div style={{
         textAlign: 'center',
