@@ -149,6 +149,10 @@ const Bpp = () => {
     if (isWechatEcosystem()) return '微信生态未知场景';
     return '非微信生态环境';
   };
+  function isDouyinEnv() {
+    const ua = window.navigator.userAgent.toLowerCase();
+    return ua.includes('aweme') || ua.includes('bytedancewebview');
+  }
 
   return (
     <div style={{
@@ -158,7 +162,7 @@ const Bpp = () => {
       boxSizing: 'border-box'
     }}>
 
-      是否为字节{window.navigator.userAgent.toLowerCase().toLowerCase().includes('bytedancewebview')}
+      是否为字节{isDouyinEnv() ? '是' : '否'}
       {/* 顶部标题栏 */}
       <div style={{
         textAlign: 'center',
