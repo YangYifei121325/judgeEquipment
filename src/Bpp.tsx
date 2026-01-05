@@ -161,7 +161,10 @@ const Bpp = () => {
       padding: '16px',
       boxSizing: 'border-box'
     }}>
-
+      window.innerHeight{window.innerHeight}
+      window.innerWidth{window.innerWidth}
+      document.body.clientHeight{document.body.clientHeight}
+      document.body.clientWidth{document.body.clientWidth}
       是否为字节{isDouyinEnv() ? '是' : '否'}
       {/* 顶部标题栏 */}
       <div style={{
